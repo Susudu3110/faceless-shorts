@@ -7,7 +7,8 @@ sudo apt-get update -qq
 sudo apt-get install -y --no-install-recommends ffmpeg fonts-liberation wget ca-certificates >/dev/null
 
 cd "$HOME"
-wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+wget -q -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+ls -lh chrome.deb && dpkg-deb -f chrome.deb Package
 sudo apt-get install -y -qq ./chrome.deb >/dev/null
 rm -f chrome.deb
 
