@@ -126,5 +126,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release create "r${{ github.run_number }}" "$RUNNER_TEMP/out/final.mp4" \
+            --repo "$GITHUB_REPOSITORY" \
             --title "${{ github.event.inputs.project }} · render #$GITHUB_RUN_NUMBER" \
             --notes "Auto-rendered. Download final.mp4 below."
