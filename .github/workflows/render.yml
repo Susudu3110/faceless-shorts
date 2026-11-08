@@ -1,0 +1,129 @@
+name: Render
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        description: Project folder in the repo (e.g. mailed, _tttest/tt)
+        required: true
+        default: mailed
+      chunks:
+        description: How many parallel chunks to render
+        required: true
+        default: '12'
+      draft:
+        description: Draft mode (fast loop, lower quality)
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: render-${{ github.event.inputs.project }}
+  cancel-in-progress: true
+
+jobs:
+  qc:
+    name: QC · check + sound + contact sheet
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Chrome + ffmpeg
+        run: bash .github/scripts/setup-chrome.sh
+      - name: Check (boots, lists shots, finds draw errors)
+        working-directory: ${{ github.event.inputs.project }}
+        run: |
+          node tools/capture.mjs check 2>&1 | tee check.log
+          tail -n 1 check.log | grep -q 'CHECK OK'
+      - name: Sound (cues + procedural mix)
+        working-directory: ${{ github.event.inputs.project }}
+        run: |
+          node tools/capture.mjs cues
+          pip install -q numpy scipy
+          python3 tools/mix.py .
+      - name: Contact sheet
+        working-directory: ${{ github.event.inputs.project }}
+        run: node tools/capture.mjs sheet review/all.jpg 0.5 9
+      - name: Upload QC
+        uses: actions/upload-artifact@v4
+        with:
+          name: qc
+          retention-days: 30
+          path: |
+            ${{ github.event.inputs.project }}/review/all.jpg
+            ${{ github.event.inputs.project }}/check.log
+      - name: Upload mix
+        uses: actions/upload-artifact@v4
+        with:
+          name: mix
+          retention-days: 1
+          path: ${{ github.event.inputs.project }}/data/mix.wav
+      - name: Plan chunks
+        id: plan
+        env:
+          PROJECT: ${{ github.event.inputs.project }}
+          CHUNKS: ${{ github.event.inputs.chunks }}
+        run: python3 - <<'PY'
+        import json, math, os
+        p = os.environ['PROJECT'] + '/data/cues.json'
+        dur = json.load(open(p))['duration']
+        n = int(os.environ['CHUNKS']); L = dur / n
+        inc = [{'c': i, 's': round(i * L, 2), 'e': round(min((i + 1) * L, dur), 2)} for i in range(n)]
+        open(os.environ['GITHUB_OUTPUT'], 'a').write(f"matrix={json.dumps(inc)}")
+        print(f"duration {dur:.2f}s -> {n} chunks of {L:.2f}s")
+        PY
+
+  render:
+    name: Chunk ${{ matrix.c }}
+    needs: qc
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.qc.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Chrome
+        run: bash .github/scripts/setup-chrome.sh
+      - name: Get the mix
+        uses: actions/download-artifact@v4
+        with:
+          name: mix
+          path: ${{ github.event.inputs.project }}/data
+      - name: Render chunk
+        working-directory: ${{ github.event.inputs.project }}
+        run: |
+          node tools/capture.mjs video renders/chunk-$(printf '%02d' ${{ matrix.c }}).mp4 \
+            ${{ matrix.s }} ${{ matrix.e }} ${{ github.event.inputs.draft && '--draft' || '' }}
+      - name: Upload chunk
+        uses: actions/upload-artifact@v4
+        with:
+          name: chunk-${{ matrix.c }}
+          retention-days: 1
+          path: ${{ github.event.inputs.project }}/renders/chunk-*.mp4
+
+  finish:
+    name: Concat + release
+    needs: render
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all chunks
+        uses: actions/download-artifact@v4
+        with:
+          pattern: 'chunk-*'
+          merge-multiple: true
+          path: parts
+      - name: Concat
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ffmpeg >/dev/null
+          cd parts && ls -1 chunk-*.mp4 | sort | sed 's/^/file /' > list.txt
+          ffmpeg -v error -f concat -safe 0 -i list.txt -c copy "final.mp4"
+          mkdir -p "$RUNNER_TEMP/out" && cp final.mp4 "$RUNNER_TEMP/out/"
+      - name: Attach to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "r${{ github.run_number }}" "$RUNNER_TEMP/out/final.mp4" \
+            --title "${{ github.event.inputs.project }} · render #$GITHUB_RUN_NUMBER" \
+            --notes "Auto-rendered. Download final.mp4 below."

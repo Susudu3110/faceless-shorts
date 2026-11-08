@@ -1,0 +1,685 @@
+{
+ "duration": 376.605,
+ "voice": "am_michael",
+ "speed": 0.95,
+ "lines": [
+  {
+   "i": 0,
+   "text": "In 1914, the US mail delivered a parcel that giggled.",
+   "start": 0.45,
+   "end": 5.251
+  },
+  {
+   "i": 1,
+   "text": "Her name was May, she was five years old,",
+   "start": 5.431,
+   "end": 8.311
+  },
+  {
+   "i": 2,
+   "text": "and the stamps to ship her cost fifty-three cents.",
+   "start": 8.391,
+   "end": 11.236
+  },
+  {
+   "i": 3,
+   "text": "They went right on her little coat.",
+   "start": 11.415,
+   "end": 13.173
+  },
+  {
+   "i": 4,
+   "text": "She went seventy-three miles through the post,",
+   "start": 13.353,
+   "end": 15.833
+  },
+  {
+   "i": 5,
+   "text": "and the rule that allowed it?",
+   "start": 16.233,
+   "end": 17.526
+  },
+  {
+   "i": 6,
+   "text": "Well, there wasn't one.",
+   "start": 17.706,
+   "end": 18.973
+  },
+  {
+   "i": 7,
+   "text": "The post office patched that loophole by summer anyway.",
+   "start": 19.153,
+   "end": 22.253
+  },
+  {
+   "i": 8,
+   "text": "And for fifty years, nobody dared mail a whole human being again.",
+   "start": 22.433,
+   "end": 26.736
+  },
+  {
+   "i": 9,
+   "text": "Until a champion read the rulebook a little... differently.",
+   "start": 26.916,
+   "end": 30.289
+  },
+  {
+   "i": 10,
+   "text": "Two people went through the mail on purpose. Both stories true.",
+   "start": 30.469,
+   "end": 34.264
+  },
+  {
+   "i": 11,
+   "text": "Let's rewind back to May.",
+   "start": 34.444,
+   "end": 35.986
+  },
+  {
+   "i": 12,
+   "text": "In 1914, May's family lived on a farm near Grangeville, Idaho,",
+   "start": 36.166,
+   "end": 41.746
+  },
+  {
+   "i": 13,
+   "text": "and grandma's place was in Lewiston, seventy-three miles of hills away.",
+   "start": 42.326,
+   "end": 47.217
+  },
+  {
+   "i": 14,
+   "text": "And May wanted to visit her. Badly.",
+   "start": 47.397,
+   "end": 49.595
+  },
+  {
+   "i": 15,
+   "text": "But the train ticket cost three times more",
+   "start": 49.775,
+   "end": 52.205
+  },
+  {
+   "i": 16,
+   "text": "than what the postage would run her.",
+   "start": 52.375,
+   "end": 54.098
+  },
+  {
+   "i": 17,
+   "text": "So her dad walked up to the post office counter",
+   "start": 54.278,
+   "end": 57.468
+  },
+  {
+   "i": 18,
+   "text": "and asked the most dangerous question in US history:",
+   "start": 57.528,
+   "end": 61.202
+  },
+  {
+   "i": 19,
+   "text": "So... what does it cost to mail a little kid?",
+   "start": 61.202,
+   "end": 64.02
+  },
+  {
+   "i": 20,
+   "text": "Because 1913 had just invented parcel post, and trains took packages now.",
+   "start": 64.2,
+   "end": 70.718
+  },
+  {
+   "i": 21,
+   "text": "The clerk flipped through the big rulebook, sweating.",
+   "start": 70.898,
+   "end": 73.401
+  },
+  {
+   "i": 22,
+   "text": "The rulebook covered bees, it covered baby chicks, it went on and on...",
+   "start": 73.581,
+   "end": 77.78
+  },
+  {
+   "i": 23,
+   "text": "But nothing in there said no.",
+   "start": 77.96,
+   "end": 79.582
+  },
+  {
+   "i": 24,
+   "text": "So May climbed up onto the scale,",
+   "start": 79.762,
+   "end": 81.512
+  },
+  {
+   "i": 25,
+   "text": "forty-eight and a half pounds,",
+   "start": 81.952,
+   "end": 83.572
+  },
+  {
+   "i": 26,
+   "text": "just one pound and a half under the fifty pound parcel limit.",
+   "start": 83.692,
+   "end": 87.654
+  },
+  {
+   "i": 27,
+   "text": "She was legal.",
+   "start": 87.834,
+   "end": 88.838
+  },
+  {
+   "i": 28,
+   "text": "Then on went fifty-three cents of stamps on her coat,",
+   "start": 89.018,
+   "end": 92.118
+  },
+  {
+   "i": 29,
+   "text": "and her mom's cousin Leonard took the handoff,",
+   "start": 92.678,
+   "end": 95.098
+  },
+  {
+   "i": 30,
+   "text": "because he just happened to be the railway mail clerk.",
+   "start": 95.748,
+   "end": 98.623
+  },
+  {
+   "i": 31,
+   "text": "May rode the next train, right in the mail car,",
+   "start": 98.803,
+   "end": 101.613
+  },
+  {
+   "i": 32,
+   "text": "sitting on the mail sacks, waving at whatever trains wave at.",
+   "start": 102.123,
+   "end": 105.892
+  },
+  {
+   "i": 33,
+   "text": "When the train pulled in, Leonard walked her up the hill",
+   "start": 106.072,
+   "end": 109.362
+  },
+  {
+   "i": 34,
+   "text": "and delivered her to grandma's front door.",
+   "start": 109.442,
+   "end": 111.745
+  },
+  {
+   "i": 35,
+   "text": "Grandma got the parcel. May got seventy-three miles of adventure.",
+   "start": 111.925,
+   "end": 116.223
+  },
+  {
+   "i": 36,
+   "text": "But Washington did not laugh.",
+   "start": 116.403,
+   "end": 118.233
+  },
+  {
+   "i": 37,
+   "text": "The newspapers told the whole country about the girl in the mail,",
+   "start": 118.413,
+   "end": 122.603
+  },
+  {
+   "i": 38,
+   "text": "and that summer, the Postmaster General made it official:",
+   "start": 122.603,
+   "end": 126.113
+  },
+  {
+   "i": 39,
+   "text": "no person may ever be sent through the mail.",
+   "start": 126.763,
+   "end": 129.353
+  },
+  {
+   "i": 40,
+   "text": "You could still mail day-old baby chicks, though.",
+   "start": 129.533,
+   "end": 132.27
+  },
+  {
+   "i": 41,
+   "text": "The rulebook got a new page, and May went back to normal mail. For fifty years.",
+   "start": 132.45,
+   "end": 137.534
+  },
+  {
+   "i": 42,
+   "text": "Until... London, 1964.",
+   "start": 137.714,
+   "end": 140.665
+  },
+  {
+   "i": 43,
+   "text": "The star of part two: a broke Australian",
+   "start": 140.845,
+   "end": 143.882
+  },
+  {
+   "i": 44,
+   "text": "and his five foot wooden box.",
+   "start": 143.882,
+   "end": 145.735
+  },
+  {
+   "i": 45,
+   "text": "Reg Spiers. Two metres of champion javelin thrower from Adelaide.",
+   "start": 145.915,
+   "end": 150.599
+  },
+  {
+   "i": 46,
+   "text": "He'd already thrown for Australia at the Commonwealth Games in Perth.",
+   "start": 150.779,
+   "end": 154.985
+  },
+  {
+   "i": 47,
+   "text": "Now he was chasing a spot at the Tokyo Olympics",
+   "start": 155.165,
+   "end": 158.165
+  },
+  {
+   "i": 48,
+   "text": "when an injury blew the whole plan up.",
+   "start": 158.595,
+   "end": 160.739
+  },
+  {
+   "i": 49,
+   "text": "So Reg took an airport job in the cargo shed,",
+   "start": 160.919,
+   "end": 163.989
+  },
+  {
+   "i": 50,
+   "text": "saving every pound for the flight home to his wife",
+   "start": 164.579,
+   "end": 167.445
+  },
+  {
+   "i": 51,
+   "text": "and his little daughter, whose birthday was creeping up.",
+   "start": 167.445,
+   "end": 170.756
+  },
+  {
+   "i": 52,
+   "text": "And then one London morning, his wallet vanished.",
+   "start": 170.936,
+   "end": 173.871
+  },
+  {
+   "i": 53,
+   "text": "Every saved pound inside it. Gone.",
+   "start": 174.051,
+   "end": 176.585
+  },
+  {
+   "i": 54,
+   "text": "So: no ticket, and a birthday countdown already running.",
+   "start": 176.765,
+   "end": 180.51
+  },
+  {
+   "i": 55,
+   "text": "Now, Reg had spent months watching animals go through that shed",
+   "start": 180.69,
+   "end": 184.85
+  },
+  {
+   "i": 56,
+   "text": "as ordinary air freight,",
+   "start": 184.98,
+   "end": 186.23
+  },
+  {
+   "i": 57,
+   "text": "and one idea crawled into his head:",
+   "start": 186.86,
+   "end": 188.93
+  },
+  {
+   "i": 58,
+   "text": "If they can do it, I can do it.",
+   "start": 189.55,
+   "end": 191.392
+  },
+  {
+   "i": 59,
+   "text": "He knew the rulebook too. The maximum crate gate:",
+   "start": 191.572,
+   "end": 194.622
+  },
+  {
+   "i": 60,
+   "text": "five by three by two and a half feet.",
+   "start": 195.162,
+   "end": 197.401
+  },
+  {
+   "i": 61,
+   "text": "Two metres of champion, folded into five feet of box.",
+   "start": 197.581,
+   "end": 201.312
+  },
+  {
+   "i": 62,
+   "text": "His friend John built one in a London workshop",
+   "start": 201.492,
+   "end": 204.252
+  },
+  {
+   "i": 63,
+   "text": "big enough to sit with straight legs, or lie",
+   "start": 204.402,
+   "end": 207.249
+  },
+  {
+   "i": 64,
+   "text": "with your knees bent.",
+   "start": 207.249,
+   "end": 208.549
+  },
+  {
+   "i": 65,
+   "text": "Both ends were loose panels held by wooden pegs.",
+   "start": 208.729,
+   "end": 211.792
+  },
+  {
+   "i": 66,
+   "text": "Pegs that Reg could knock out FROM THE INSIDE.",
+   "start": 211.972,
+   "end": 214.712
+  },
+  {
+   "i": 67,
+   "text": "And on the label? A load of paint.",
+   "start": 214.892,
+   "end": 216.982
+  },
+  {
+   "i": 68,
+   "text": "Headed to an Australian shoe company that did not exist.",
+   "start": 217.162,
+   "end": 220.966
+  },
+  {
+   "i": 69,
+   "text": "And the genius bit: he shipped himself cash on delivery.",
+   "start": 221.146,
+   "end": 224.802
+  },
+  {
+   "i": 70,
+   "text": "London pays nothing today. Whoever catches the parcel",
+   "start": 224.982,
+   "end": 228.722
+  },
+  {
+   "i": 71,
+   "text": "all the way over in Perth, pays for it later.",
+   "start": 228.812,
+   "end": 231.899
+  },
+  {
+   "i": 72,
+   "text": "Loaded in with him: tinned food, a torch, a blanket,",
+   "start": 232.079,
+   "end": 235.759
+  },
+  {
+   "i": 73,
+   "text": "a pillow, and two plastic bottles.",
+   "start": 235.829,
+   "end": 237.834
+  },
+  {
+   "i": 74,
+   "text": "One was for water.",
+   "start": 238.014,
+   "end": 239.168
+  },
+  {
+   "i": 75,
+   "text": "I'll let you guess about bottle number two.",
+   "start": 239.348,
+   "end": 241.686
+  },
+  {
+   "i": 76,
+   "text": "London fog held the flight a full extra day,",
+   "start": 241.866,
+   "end": 244.416
+  },
+  {
+   "i": 77,
+   "text": "so Reg's first twenty-four hours were pure lying-in-a-box patience.",
+   "start": 245.006,
+   "end": 249.603
+  },
+  {
+   "i": 78,
+   "text": "A grown man lying in the dark, being very, very patient.",
+   "start": 249.783,
+   "end": 253.547
+  },
+  {
+   "i": 79,
+   "text": "Then, airborne. And when the plane finally levelled out,",
+   "start": 253.727,
+   "end": 257.387
+  },
+  {
+   "i": 80,
+   "text": "Reg knocked the pegs out and climbed out to stretch his legs.",
+   "start": 257.807,
+   "end": 261.351
+  },
+  {
+   "i": 81,
+   "text": "Then the plane began to sink toward Paris,",
+   "start": 261.531,
+   "end": 264.111
+  },
+  {
+   "i": 82,
+   "text": "so back in the crate he went, leaving his you-know-what can on top.",
+   "start": 264.521,
+   "end": 268.678
+  },
+  {
+   "i": 83,
+   "text": "The French handlers found that can, blamed the English,",
+   "start": 268.858,
+   "end": 272.208
+  },
+  {
+   "i": 84,
+   "text": "and said some terrible things about the English.",
+   "start": 272.638,
+   "end": 275.164
+  },
+  {
+   "i": 85,
+   "text": "Down in the hold, nobody had noticed. He was still just a crate of paint.",
+   "start": 275.344,
+   "end": 279.948
+  },
+  {
+   "i": 86,
+   "text": "Next stop, Bombay. Where ground crews parked his crate",
+   "start": 280.128,
+   "end": 283.778
+  },
+  {
+   "i": 87,
+   "text": "upside down, in the sun, for four straight hours.",
+   "start": 283.848,
+   "end": 287.23
+  },
+  {
+   "i": 88,
+   "text": "The quote: \"Sweating like a pig, but not giving up.\"",
+   "start": 287.41,
+   "end": 290.326
+  },
+  {
+   "i": 89,
+   "text": "Then came the sound: Australian accents swearing about heavy crates.",
+   "start": 290.506,
+   "end": 295.183
+  },
+  {
+   "i": 90,
+   "text": "And that noise means Perth. That noise means home.",
+   "start": 295.363,
+   "end": 298.664
+  },
+  {
+   "i": 91,
+   "text": "Three days. Sixty-three hours. In one wooden box.",
+   "start": 298.844,
+   "end": 302.097
+  },
+  {
+   "i": 92,
+   "text": "The crate rolled straight into a locked customs shed.",
+   "start": 302.277,
+   "end": 305.181
+  },
+  {
+   "i": 93,
+   "text": "Reg knocked the pegs out, found a crate of beer,",
+   "start": 305.361,
+   "end": 308.491
+  },
+  {
+   "i": 94,
+   "text": "and toasted his freedom with a free beer. He doesn't even drink.",
+   "start": 308.771,
+   "end": 312.669
+  },
+  {
+   "i": 95,
+   "text": "Then, tools sitting right there, he cut a hole in the wall,",
+   "start": 312.849,
+   "end": 316.369
+  },
+  {
+   "i": 96,
+   "text": "put on his suit, because flying barely creases a suit,",
+   "start": 316.629,
+   "end": 320.159
+  },
+  {
+   "i": 97,
+   "text": "and jumped through the window to hitch a ride into town.",
+   "start": 320.239,
+   "end": 323.679
+  },
+  {
+   "i": 98,
+   "text": "Meanwhile, worried John had called the newspapers from London,",
+   "start": 323.859,
+   "end": 327.469
+  },
+  {
+   "i": 99,
+   "text": "so when Reg got home, the press was already there,",
+   "start": 328.009,
+   "end": 331.489
+  },
+  {
+   "i": 100,
+   "text": "and camped on his street for weeks.",
+   "start": 331.789,
+   "end": 333.646
+  },
+  {
+   "i": 101,
+   "text": "The airline never sent him one single bill.",
+   "start": 333.826,
+   "end": 336.381
+  },
+  {
+   "i": 102,
+   "text": "And a politician wired five quid: \"a gallant effort by a real Aussie.\"",
+   "start": 336.561,
+   "end": 341.364
+  },
+  {
+   "i": 103,
+   "text": "The birthday? He made it. Presents, delivered.",
+   "start": 341.544,
+   "end": 344.193
+  },
+  {
+   "i": 104,
+   "text": "His wife did not believe a word of it at first.",
+   "start": 344.373,
+   "end": 347.111
+  },
+  {
+   "i": 105,
+   "text": "Then she did the math: how else would you get here?",
+   "start": 347.291,
+   "end": 350.102
+  },
+  {
+   "i": 106,
+   "text": "And that 1914 rule, no people in the mail?",
+   "start": 350.282,
+   "end": 354.08
+  },
+  {
+   "i": 107,
+   "text": "Reg Spiers read it as more of... a suggestion.",
+   "start": 354.26,
+   "end": 357.462
+  },
+  {
+   "i": 108,
+   "text": "May: five years old, fifty-three cents, seventy-three miles.",
+   "start": 357.642,
+   "end": 361.54
+  },
+  {
+   "i": 109,
+   "text": "Reg: twenty-two, 63 hours in a crate, half a planet.",
+   "start": 361.72,
+   "end": 365.824
+  },
+  {
+   "i": 110,
+   "text": "The post office never planned to be a passenger airline.",
+   "start": 366.004,
+   "end": 369.45
+  },
+  {
+   "i": 111,
+   "text": "It was just... really bad at saying no.",
+   "start": 369.63,
+   "end": 372.082
+  },
+  {
+   "i": 112,
+   "text": "Subscribe, before the fine print catches you too.",
+   "start": 372.262,
+   "end": 375.225
+  }
+ ]
+}

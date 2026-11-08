@@ -1,0 +1,66 @@
+/home/sudarshan/faceless-shorts/_selftest/deep-dive
+style: deep-dive. Read /tmp/opencode/faceless-shorts/styles/deep-dive/STYLE.md, then rewrite script.json + src/shots.js
+== deep-dive
+ 0   0.35-  3.52  What happens if you hold your breath for as long as you can?
+ 1   3.78-  6.05  For the first thirty seconds, nothing much.
+ 2   6.31- 10.76  Your lungs are full, and your blood is still carrying plenty of oxygen.
+ 3  11.02- 13.39  But carbon dioxide starts building up,
+ 4  13.91- 18.33  and that, not the lack of oxygen, is what makes you desperate to breathe.
+ 5  18.59- 21.87  Your diaphragm starts twitching, trying to force a breath,
+ 6  22.35- 25.57  and your heart actually slows down to save oxygen.
+ 7  25.83- 29.21  Push even further, and your brain simply switches you off.
+ 8  29.47- 32.98  You pass out, and your body starts breathing again on its own.
+ 9  33.24- 36.18  Which is why you should never try this underwater.
+data/narration.wav (37.38 s, am_michael x1.0) + data/lines.json. Next: words.py
+data/words.json: 102 words (Whisper heard 102)
+duration 37.38 s
+S01     0.00 →   3.70  (3.70 s)  face close-up: big inhale, then hold, wide eyes
+S02     3.70 →   6.23  (2.52 s)  medium shot orbit, timer 0:00 to 0:30
+S03     6.23 →   8.16  (1.93 s)  x-ray chest, lungs full
+S04     8.16 →  10.94  (2.78 s)  blood vessel, bright red cells, OXYGEN pill
+S05    10.94 →  13.83  (2.89 s)  CO2 bubbles fill the vessel, cells darken
+S06    13.83 →  18.51  (4.68 s)  x-ray body pulses red: CO2 alarm
+S07    18.51 →  22.27  (3.76 s)  diaphragm spasms: lungs jerk, body jolts
+S08    22.27 →  25.75  (3.48 s)  heart close-up, beats slow down
+S09    25.75 →  29.39  (3.64 s)  face: eyes close, head drops, blackout
+S10    29.39 →  33.16  (3.77 s)  from black: lungs inflate by themselves
+S11    33.16 →  37.38  (4.23 s)  hero looks at camera, warning sign
+captions:
+    0.30–0.87   What *happens
+    0.87–1.69   if you *hold
+    1.69–3.79   your *breath?
+    3.79–4.01   The first
+    4.01–5.25   *30 seconds
+    5.25–6.31   nothing *much
+    6.31–8.05   Lungs are *full
+    8.05–8.73   your *blood
+    8.73–10.97  still has *oxygen
+   10.97–12.23  Carbon *dioxide
+   12.23–13.86  starts *building up
+   13.86–15.03  That, *not
+   15.03–16.69  lack of *oxygen
+   16.69–17.55  makes you *desperate
+   17.55–18.55  to *breathe
+   18.55–19.43  Your *diaphragm
+   19.43–20.75  starts *twitching
+   20.75–21.31  trying to *force
+   21.31–22.31  a *breath
+   22.31–23.45  Your *heart
+   23.45–24.25  slows *down
+   24.25–25.78  to save *oxygen
+   25.78–27.29  Push even *further
+   27.29–28.23  your *brain
+   28.23–29.47  switches you *off
+   29.47–30.63  You pass *out
+   30.63–31.43  your *body
+   31.43–32.23  *breathing again
+   32.23–33.23  on its *own
+   33.23–33.91  Which is *why
+   33.91–34.75  you should *never
+   34.75–37.38  try this *underwater
+CHECK OK
+data/cues.json: 29 cues, 37.38 s
+data/mix.wav: 37.38 s · voice: yes · music: tension · 29 cues
+/home/sudarshan/faceless-shorts/_selftest/deep-dive/review/all.jpg (37 frames, every 1 s)
+0/120 frames[in#1 @ 0x5a64657b0b80] Error opening input: Immediate exit requested
+Error opening input file /home/sudarshan/faceless-shorts/_selftest/deep-dive/data/mix.wav.

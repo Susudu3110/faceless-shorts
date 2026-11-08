@@ -1,0 +1,13 @@
+# venv + caches
+.faceless-shorts/
+__pycache__/
+node_modules/
+.chrome/
+
+# Build outputs — everything here is regenerated on each render
+**/renders/
+**/review/
+**/data/mix.wav
+
+# OS noise
+.DS_Store
