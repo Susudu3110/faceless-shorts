@@ -1,0 +1,79 @@
+{
+ "duration": 38.764,
+ "voice": "am_michael",
+ "speed": 1.05,
+ "lines": [
+  {
+   "i": 0,
+   "text": "What happens to your body,",
+   "start": 0.45,
+   "end": 1.66
+  },
+  {
+   "i": 1,
+   "text": "if you walked backwards every day?",
+   "start": 2.02,
+   "end": 3.827
+  },
+  {
+   "i": 2,
+   "text": "Well, a six-week study had people with knee pain walk backwards,",
+   "start": 4.007,
+   "end": 7.597
+  },
+  {
+   "i": 3,
+   "text": "and their knee pain dropped, while their thighs got stronger.",
+   "start": 7.967,
+   "end": 11.469
+  },
+  {
+   "i": 4,
+   "text": "Going backwards loads your quads instead of your kneecap,",
+   "start": 11.649,
+   "end": 14.579
+  },
+  {
+   "i": 5,
+   "text": "and burns about forty percent more calories than going forward.",
+   "start": 15.129,
+   "end": 18.927
+  },
+  {
+   "i": 6,
+   "text": "Plus your brain plans every step,",
+   "start": 19.107,
+   "end": 20.807
+  },
+  {
+   "i": 7,
+   "text": "so balance and focus actually improve.",
+   "start": 21.277,
+   "end": 23.742
+  },
+  {
+   "i": 8,
+   "text": "But the twist: walk without watching, and people trip.",
+   "start": 23.922,
+   "end": 27.018
+  },
+  {
+   "i": 9,
+   "text": "So flat floor only, twenty minutes, eyes up, no phone.",
+   "start": 27.198,
+   "end": 30.672
+  },
+  {
+   "i": 10,
+   "text": "And when the whole park stares at you walking backwards,",
+   "start": 30.852,
+   "end": 33.552
+  },
+  {
+   "i": 11,
+   "text": "smile back \u2014 that's exactly what getting ahead looks like.",
+   "start": 33.872,
+   "end": 37.384
+  }
+ ]
+}

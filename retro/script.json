@@ -1,0 +1,29 @@
+{
+  "title": "Your Body If You Walk BACKWARDS Every Day",
+  "voice": "am_michael",
+  "speed": 1.05,
+  "lead": 0.45,
+  "outro": 1.2,
+  "gap": 0.18,
+  "music": "bed",
+  "sources": [
+    "Alghadir, Anwer & Shakoor? 2019 randomized 6-week trial: retro walking reduced knee pain and improved function and quadriceps strength in knee osteoarthritis (PMC6456984)",
+    "Gondhalekar & Deo 2013 randomized trial: retro walking as adjunct treatment reduced knee OA pain and disability (PMC3624710)",
+    "American College of Sports Medicine: backward walking burns roughly forty percent more calories per minute than brisk forward walking",
+    "Cleveland Clinic + National Geographic reviews: backward walking may improve balance and posture; fall risk is the main safety caveat, so a flat, clear area with eyes up is the safe setting"
+  ],
+  "lines": [
+    { "text": "What happens to your body,", "caps": "WHAT HAPPENS TO YOUR *BODY" },
+    { "text": "if you walked backwards every day?", "caps": "IF YOU WALKED *BACKWARDS" },
+    { "text": "Well, a six-week study had people with knee pain walk backwards,", "caps": "THE 6 WEEK *STUDY" },
+    { "text": "and their knee pain dropped, while their thighs got stronger.", "caps": "PAIN *DOWN THIGHS *STRONGER" },
+    { "text": "Going backwards loads your quads instead of your kneecap,", "caps": "QUADS LOAD KNEE *SPARED" },
+    { "text": "and burns about forty percent more calories than going forward.", "caps": "BURNS 40% MORE *CALORIES" },
+    { "text": "Plus your brain plans every step,", "caps": "YOUR *BRAIN PLANS" },
+    { "text": "so balance and focus actually improve.", "caps": "BALANCE UP | *FOCUS UP" },
+    { "text": "But the twist: walk without watching, and people trip.", "caps": "THE *TWIST | *TRIP RISK" },
+    { "text": "So flat floor only, twenty minutes, eyes up, no phone.", "caps": "FLAT FLOOR | 20 *MINUTES | NO *PHONE" },
+    { "text": "And when the whole park stares at you walking backwards,", "caps": "THE PARK *STARES" },
+    { "text": "smile back — that's exactly what getting ahead looks like.", "caps": "SMILE *BACK GETTING *AHEAD" }
+  ]
+}
