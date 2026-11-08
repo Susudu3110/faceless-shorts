@@ -72,7 +72,7 @@ jobs:
           dur = json.load(open(p))['duration']
           n = int(os.environ['CHUNKS']); L = dur / n
           inc = [{'c': i, 's': round(i * L, 2), 'e': round(min((i + 1) * L, dur), 2)} for i in range(n)]
-          open(os.environ['GITHUB_OUTPUT'], 'a').write(f"matrix={json.dumps(inc)}\n")
+          open(os.environ['GITHUB_OUTPUT'], 'a').write('matrix=' + json.dumps({'include': inc}) + '\n')
           print(f"duration {dur:.2f}s -> {n} chunks of {L:.2f}s")
           PY
 
