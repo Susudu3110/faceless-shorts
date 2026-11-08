@@ -1,0 +1,51 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face { font-family:'InterB'; src: url('file:///home/sudarshan/faceless-shorts/retro/fonts/Inter-Black.ttf') format('truetype'); }
+* { margin:0; }
+body { width:1280px; height:720px; overflow:hidden; background:#E57A8A; font-family:'InterB',sans-serif; -webkit-font-smoothing:none; }
+.wrap { position:absolute; left:52px; top:40px; }
+h1 { color:#F4F1EA; font-size:88px; font-weight:900; letter-spacing:2px; -webkit-text-stroke:16px #131F3A; paint-order:stroke fill; line-height:1.06; }
+h1 small { display:block; font-size:54px; color:#FFD43B; -webkit-text-stroke:12px #131F3A; }
+h1 .big { display:block; font-size:114px; color:#F4F1EA; -webkit-text-stroke:18px #131F3A; letter-spacing:0; }
+h1 .q { display:block; font-size:74px; margin-top:10px; }
+svg.figure { position:absolute; right:210px; top:280px; transform:rotate(-7deg) scale(0.86); transform-origin:bottom right; }
+svg.knee { position:absolute; right:20px; bottom:12px; }
+</style></head><body>
+<h1 class="wrap"><small>YOUR BODY IF YOU WALK</small><span class="big">BACKWARDS</span><span class="q">EVERY DAY? <span style="color:#FFD43B;-webkit-text-stroke:13px #131F3A">PAIN DOWN!</span></span></h1>
+<!-- walker, walking to the left i.e. "backwards", flat vector -->
+<svg class="figure" width="620" height="600" viewBox="0 0 640 620">
+  <g stroke-linecap="round" fill="none">
+    <!-- legs -->
+    <path d="M330 300 L286 372 L236 428" stroke="#1F2A44" stroke-width="42"/>
+    <path d="M330 300 L356 400 L304 446" stroke="#1F2A44" stroke-width="42"/>
+    <path d="M222 434 h64" stroke="#131F3A" stroke-width="46"/>
+    <path d="M286 452 h64" stroke="#131F3A" stroke-width="46"/>
+    <!-- arm behind -->
+    <path d="M380 168 L432 246 L404 322" stroke="#D49C7E" stroke-width="30"/>
+    <!-- torso -->
+    <rect x="292" y="120" width="120" height="196" rx="46" fill="#3A7BD5" stroke="none"/>
+    <rect x="292" y="288" width="120" height="22" rx="10" fill="#2F67BE" stroke="none"/>
+    <!-- head -->
+    <circle cx="416" cy="66" r="86" fill="#E8B89A" stroke="none"/>
+    <circle cx="416" cy="62" r="80" fill="none" stroke="#D49C7E" stroke-width="10" stroke-opacity="0.5"/>
+    <!-- face: looks back over shoulder -->
+    <circle cx="392" cy="58" r="12" fill="#131F3A" stroke="none"/>
+    <circle cx="452" cy="62" r="12" fill="#131F3A" stroke="none"/>
+    <path d="M382 34 L412 28" stroke="#131F3A" stroke-width="9"/>
+    <path d="M444 92 q20 14 42 4" stroke="#131F3A" stroke-width="9"/>
+    <!-- red reverse arrow -->
+    <g transform="translate(160,84)">
+      <path d="M40 -46 A52 52 0 1 1 -18 28" stroke="#D62839" stroke-width="34"/>
+      <path d="M-52 -6 L-16 52 L34 8" fill="#D62839" stroke="none"/>
+    </g>
+  </g>
+</svg>
+<!-- x-ray knee badge = the science payoff -->
+<svg class="knee" width="240" height="230" viewBox="0 0 240 230">
+  <rect x="0" y="0" width="240" height="230" rx="36" fill="#0F2438"/>
+  <rect x="14" y="26" width="52" height="150" rx="26" fill="#4FD1E8" transform="rotate(-14 40 100)"/>
+  <rect x="118" y="62" width="52" height="150" rx="26" fill="#4FD1E8" transform="rotate(10 144 160)"/>
+  <circle cx="120" cy="112" r="34" fill="#E57A8A"/>
+  <circle cx="166" cy="58" r="13" fill="#FFD43B"/>
+  <path d="M40 40 h46 M36 68 h30" stroke="#2FA8C4" stroke-width="0" fill="none"/>
+</svg>
+</body></html>
