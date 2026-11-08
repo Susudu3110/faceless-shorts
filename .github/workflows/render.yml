@@ -65,15 +65,16 @@ jobs:
         env:
           PROJECT: ${{ github.event.inputs.project }}
           CHUNKS: ${{ github.event.inputs.chunks }}
-        run: python3 - <<'PY'
-        import json, math, os
-        p = os.environ['PROJECT'] + '/data/cues.json'
-        dur = json.load(open(p))['duration']
-        n = int(os.environ['CHUNKS']); L = dur / n
-        inc = [{'c': i, 's': round(i * L, 2), 'e': round(min((i + 1) * L, dur), 2)} for i in range(n)]
-        open(os.environ['GITHUB_OUTPUT'], 'a').write(f"matrix={json.dumps(inc)}")
-        print(f"duration {dur:.2f}s -> {n} chunks of {L:.2f}s")
-        PY
+        run: |
+          python3 - <<'PY'
+          import json, os
+          p = os.environ['PROJECT'] + '/data/cues.json'
+          dur = json.load(open(p))['duration']
+          n = int(os.environ['CHUNKS']); L = dur / n
+          inc = [{'c': i, 's': round(i * L, 2), 'e': round(min((i + 1) * L, dur), 2)} for i in range(n)]
+          open(os.environ['GITHUB_OUTPUT'], 'a').write(f"matrix={json.dumps(inc)}")
+          print(f"duration {dur:.2f}s -> {n} chunks of {L:.2f}s")
+          PY
 
   render:
     name: Chunk ${{ matrix.c }}
