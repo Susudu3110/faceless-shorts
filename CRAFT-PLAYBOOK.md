@@ -103,3 +103,54 @@ Put the CTA LAST 2–4 s over the punchline's aftermath, spoken + captioned; kee
   emotional beats. Measure → frame-probe the exact holds → fix code, not taste.
 - Every overlay/dip must RETURN to zero: leftover haze reads as "broken fade".
 
+## 10. THE ROLE-PLAY HOOK (psychology-channel structure, verified against hits)
+Alternate opening pattern to the impossible-first-line: **put the viewer INSIDE the
+story as a character with stated stakes.**
+- NOT: "How did Nescafe make coffee popular in Japan?" (situation — weak)
+- YES: "You're a massive coffee company, and you have a problem." (stakes — strong)
+- Then unfold the solution STEP BY STEP (one scene per step, never explain twice),
+  and the final line reveals the actual real-world story ("…and that company was
+  Nescafe. 1959.")
+- OUR channel translation ("One Move Daily" / body-mechanics videos):
+  "You're your own knee joint — and you've been carrying
+   a 160-lb human for 30 years. Tonight, your patella files a complaint."
+  Viewer isn't watching a body; they ARE the body with a problem to solve.
+
+## 11. BUSINESS-STORY NICHE CHECK (why the weird-company lane works)
+The lane that kept showing through all the slop in the 7-day-challenge research:
+"why does this company do this weird thing that sounds dumb until someone explains
+it and you go 'oh, that's actually genius'." It makes viewers FEEL SMART for
+watching — that's the retention currency. For us: the BODY is the company —
+every weird body mechanism is a "weird business practice" with a genius reason
+behind it (why we get goosebumps, why knuckles crack, why yawning is contagious).
+
+## 12. THE SELF-ANALYTICS LOOP (ZIO + the 7-day challenge — run after EVERY video)
+- Only three metrics matter for shorts: **views · retention · swipe rate.**
+  Day-1/2 gates for "this one's working": swipe-through ≥ 80%, retention ≥ 90%.
+  (Under them after ~24 h → diagnose, don't cope, don't delete.)
+- Flop diagnosis triad (each flop gets a named cause, in writing):
+  1. TOPIC-MOOD MISMATCH — people open shorts for a quick dopamine hit, not to be
+     told they're doomed. Weird-but-fascinating > heavy-negativity.
+  2. INTRO STAKES — shocking data ≠ caring. Add a stake or a character.
+  3. NO PAYOFF ENDING — always land a solution / twist / earned payoff, never just
+     a joke.
+- **VIRAL RECIPE LIST**: after the first ~10 videos, re-watch OUR OWN top performers
+  and write down what makes them different from the flops. Tick boxes in the next
+  batch. (Known entries so far: shorter subs, faster scene changes, no unfunny
+  end-jokes, SFX in the first second, one attention-grabbing graphic early.)
+- **FORMULAS DECAY.** When the same technique stops performing, that's data — the
+  recipe list needs revision, not nostalgia. Re-scan the niche's recent winners and
+  add NEW boxes; kill stale ones. Repeat forever.
+- **IMPROVE ONE SIDE PER BATCH** (transitions → captions → color → SFX → voices),
+  never everything at once. Publish fast early; polish on a schedule.
+- BRAND CONSISTENCY: one font, one palette, one character family across the whole
+  channel — the audience should recognize a frame without reading the name.
+  (Our palette + Inter Black captions + ink/yellow words = already locked.)
+- COPYRIGHT SHIELD: never reuse others' footage — our frames are 100% generated
+  in code, so takedowns/reused-content strikes structurally can't hit the channel.
+- Copy the BONES of proven viral scripts (structure), never the skin (its exact
+  lines/topic). Feed the beat-sheet into a NEW topic.
+- LAST WORD, the one thing the algorithm can't clone: the channel has to be
+  made from genuine interest. Viewers smell view-farming in the first 3 seconds.
+
+

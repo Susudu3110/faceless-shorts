@@ -56,3 +56,12 @@ knees, consistent characters, x-ray anatomy, one-word captions).
 plan (impossible line + twist + CTA) → shots on THIS rig → per-frame check →
 cloud render (12-chunk GitHub Actions, ~4 min) → measure → eye check → THEN,
 and only then, ask you live about uploading with title/desc/tags packet.
+
+## POST-PUBLISH LOOP (added 2026-11-09, from the 7-day + ZIO transcripts)
+Day 1–2 gates: swipe-through ≥ 80% · retention ≥ 90%. Pass → double down (same
+lane, same recipe boxes, next topic). Fail → written flop diagnosis (topic-mood /
+intro-stakes / no-payoff), which becomes the next video's fix — never deleted, the
+data feeds the recipe list. After ~10 videos: re-watch our top performers, extend
+the VIRAL RECIPE LIST in CRAFT-PLAYBOOK §12, rotate one improvement axis per batch
+(transitions → captions → color → SFX → voice). If views decay with the same
+technique, the FORMULA is stale → re-scan niche winners, revise list, repeat.
