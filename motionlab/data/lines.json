@@ -1,0 +1,59 @@
+{
+ "duration": 13.6,
+ "lines": [
+  {
+   "i": 0,
+   "text": "IK LEGS WALK",
+   "start": 0.4,
+   "end": 2.0
+  },
+  {
+   "i": 1,
+   "text": "IK ARMS REACH",
+   "start": 2.0,
+   "end": 3.6
+  },
+  {
+   "i": 2,
+   "text": "SQUASH LANDING",
+   "start": 3.6,
+   "end": 5.2
+  },
+  {
+   "i": 3,
+   "text": "KNEE FLEX",
+   "start": 5.2,
+   "end": 6.8
+  },
+  {
+   "i": 4,
+   "text": "REACTIONS",
+   "start": 6.8,
+   "end": 8.4
+  },
+  {
+   "i": 5,
+   "text": "MATCH CUT",
+   "start": 8.4,
+   "end": 9.6
+  },
+  {
+   "i": 6,
+   "text": "WHIP WIPE",
+   "start": 9.6,
+   "end": 10.8
+  },
+  {
+   "i": 7,
+   "text": "ANTICIPATE DASH",
+   "start": 10.8,
+   "end": 12.4
+  },
+  {
+   "i": 8,
+   "text": "CURIOUS LOOK",
+   "start": 12.4,
+   "end": 13.2
+  }
+ ]
+}

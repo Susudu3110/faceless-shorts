@@ -1,6 +1,7 @@
 // Inside Out engine: the COMPONENT ZOO. Every reusable thing on screen lives here.
 // All functions draw immediately with the shared ctx, in 1080x1920 canvas pixels unless a scale is given.
 import { ctx, C, W, H, TAU, lerp, clamp, rnd, rr, circle, ell, line, fillAll } from './lib.js';
+import * as MOTION from './motion.js';
 
 // ═════════════════════════ PROPS ═════════════════════════
 /** a piece of gum (pill shape). s = scale (1 = 80x52 px) */
@@ -368,39 +369,35 @@ export function park() {
  */
 export function walker(x, y, s, ph, back = false, flip = 1) {
   ctx.save(); ctx.translate(x, y); ctx.scale(flip * s, s);
-  const swing = Math.sin(ph), bob = Math.abs(Math.cos(ph)) * -10;
-  const lean = back ? -0.10 : 0.02;
-  // ── legs first (pants): a clean two-segment gait, same for both directions ──
-  for (const sd of [-1, 1]) {
-    const off = sd > 0 ? 0 : Math.PI;
-    const a = Math.sin(ph + off) * 0.55 + (back ? -0.14 : 0.08);
-    const hipY = -120;
-    const kneeX = Math.sin(a) * 46, kneeY = hipY + Math.cos(a) * 58;
-    const footX = kneeX + Math.sin(a * 0.9 + (back ? -0.55 : 0.35)) * 52;
-    const lift = Math.max(0, Math.sin(ph + off + (back ? Math.PI : 0))) * (back ? 20 : 26);
-    const footY = kneeY + Math.abs(Math.cos(a * 0.7)) * 40 - lift;
-    ctx.strokeStyle = C.pants; ctx.lineWidth = 26; ctx.lineCap = 'round';
-    ctx.beginPath(); ctx.moveTo(0, hipY); ctx.lineTo(kneeX, kneeY); ctx.lineTo(footX, footY); ctx.stroke();
-    ctx.save(); ctx.translate(footX, footY + 2); ctx.rotate(back ? 0.3 : 0.05);
-    rr(-18, -9, 46, 20, 9); ctx.fillStyle = C.ink; ctx.fill(); ctx.restore();
+  const M = MOTION;
+  const cyc = M.cycle(ph, { stride: 30, lift: 24, lean: back ? -0.09 : 0.05 });
+  const swing = Math.sin(ph);
+  const hipY = -128 + cyc.bob * -0.4;
+  // pace sign: feet travel opposite to travel direction when walking backwards
+  const dirSign = back ? -1 : 1;
+  // ── legs: solved with IK so the knees read as real knees ──
+  for (const [i, sd] of [[0, 1], [1, -1]]) {
+    const sw = sd > 0 ? swing : -swing;
+    const fx = (cyc.legA.x * (sd > 0 ? 1 : -1)) * dirSign;
+    const fy = (sd > 0 ? cyc.legA.y : cyc.legB.y) - Math.abs(sw) * 2;
+    const leg = M.limb(0, hipY, fx, fy - 6, 62, 60, back ? 1 : 1, 26, sd > 0 ? C.pants : C.pantsShade);
+    // foot: flat boot, planted
+    ctx.save(); ctx.translate(leg.tx, fy); ctx.rotate(back ? 0.28 : 0.04 * dirSign);
+    rr(-16, -8, 46, 18, 8); ctx.fillStyle = C.ink; ctx.fill(); ctx.restore();
   }
-  ctx.translate(0, bob);
-  // ── arms behind the torso, peeking out at the sides ──
+  // ── arms behind torso with bends (elbows slightly out) ──
   for (const sd of [-1, 1]) {
-    const a = -swing * sd * 0.5;
-    ctx.strokeStyle = C.skin; ctx.lineWidth = 17; ctx.lineCap = 'round';
-    const shX = sd * 24, shY = -210;
-    const elX = shX + sd * 10 + Math.sin(a) * 22, elY = shY + 42;
-    const hx = elX + Math.sin(a * 0.5) * 30, hy = elY + 40;
-    ctx.beginPath(); ctx.moveTo(shX, shY); ctx.lineTo(elX, elY); ctx.lineTo(hx, hy); ctx.stroke();
+    const sw = sd > 0 ? swing : -swing;
+    const hx = sd * 30 + sw * 16 * dirSign, hy = hipY - 96 + Math.abs(sw) * 14;
+    M.limb(sd * 24, hipY - 84, hx, hy, 34, 34, sd, 16, sd > 0 ? C.skin : C.skinShade);
   }
   // ── torso + lean ──
-  ctx.save(); ctx.rotate(lean);
+  ctx.save(); ctx.rotate(cyc.lean);
   rr(-34, -235, 68, 130, 26); ctx.fillStyle = C.shirt; ctx.fill();
   ctx.fillStyle = C.shirtShade; rr(-34, -118, 68, 13, 5); ctx.fill();
   ctx.restore();
   // ── head (looks over its shoulder when walking backwards) ──
-  const headX = back ? -26 : 6, headY = -300 - bob + bob;
+  const headX = back ? -26 : 6, headY = -300;
   circle(headX, headY, 52, C.skinShade); circle(headX, headY - 3, 50, C.skin);
   ctx.save(); ctx.translate(headX, headY);
   ctx.fillStyle = C.ink;
@@ -412,35 +409,47 @@ export function walker(x, y, s, ph, back = false, flip = 1) {
   ctx.restore(); ctx.restore();
 }
 
-/** x-ray knee joint: femur + tibia (cyan bones), pink quads muscle on top; stress 0..1 = red pressure ring on the kneecap */
+/** x-ray knee joint v2: femur + tibia YA into a gliding patella, quads sleeve, stress ring.
+ *  stress 0..1 = red pressure ring · quads 0..1 = muscle grows + patella glides up */
 export function knee(x, y, s, stress = 0, quads = 0) {
   ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
   ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-  // femur: runs down INTO the kneecap
-  ctx.save(); ctx.rotate(-0.16);
-  rr(-30, -290, 60, 290, 30); ctx.fillStyle = C.navy; ctx.fill();
-  rr(-22, -280, 44, 268, 22); ctx.fillStyle = C.cyan; ctx.fill();
-  ctx.fillStyle = C.white; ctx.globalAlpha = 0.5; rr(-16, -266, 16, 160, 8); ctx.fill(); ctx.globalAlpha = 1;
+  // femur — runs DOWN INTO the kneecap
+  ctx.save(); ctx.rotate(-0.15);
+  rr(-30, -302, 60, 300, 30); ctx.fillStyle = C.navy; ctx.fill();
+  rr(-22, -292, 44, 278, 22); ctx.fillStyle = C.cyan; ctx.fill();
+  ctx.globalAlpha = 0.5; ctx.fillStyle = C.white; rr(-15, -282, 15, 170, 8); ctx.fill(); ctx.globalAlpha = 1;
   ctx.restore();
-  // tibia: starts under the kneecap
+  // tibia — starts UNDER the kneecap and holds the ankle line
   ctx.save(); ctx.rotate(0.12);
-  rr(-27, 6, 54, 260, 27); ctx.fillStyle = C.navy; ctx.fill();
-  rr(-19, 18, 38, 236, 19); ctx.fillStyle = C.cyan; ctx.fill();
+  rr(-26, -10, 52, 256, 26); ctx.fillStyle = C.navy; ctx.fill();
+  rr(-19, 12, 38, 232, 19); ctx.fillStyle = C.cyan; ctx.fill();
   ctx.restore();
-  // kneecap
-  circle(2, 10, 42 + quads * 8, C.pink); circle(-2, 4, 30 + quads * 8, C.pinkLight);
-  // quads muscle
+  // quadriceps sleeve — flat teardrop with highlight + fibers
   if (quads > 0) {
-    ctx.fillStyle = C.pink; rr(-84, -300, 108, 170, 48); ctx.fill();
-    ctx.fillStyle = C.pinkLight; rr(-72, -288, 40, 130, 20); ctx.fill();
-    ctx.strokeStyle = C.cyan; ctx.lineWidth = 6; for (let i = 0; i < 3; i++) { ctx.beginPath(); ctx.moveTo(-60, -260 + i * 44); ctx.lineTo(4 + i * 6, -240 + i * 44); ctx.stroke(); }
+    const q = 1 + quads * 0.16;
+    ctx.save(); ctx.scale(q, q);
+    ctx.beginPath();
+    ctx.moveTo(-92, -318);
+    ctx.bezierCurveTo(-104, -250, -88, -168, -16, -140);
+    ctx.bezierCurveTo(30, -126, 58, -178, 46, -252);
+    ctx.bezierCurveTo(38, -304, 10, -334, -46, -330);
+    ctx.closePath();
+    ctx.fillStyle = C.pink; ctx.fill();
+    ctx.fillStyle = C.pinkLight;
+    ctx.beginPath(); ctx.moveTo(-70, -300); ctx.bezierCurveTo(-78, -240, -60, -190, -14, -166); ctx.lineTo(-2, -216); ctx.bezierCurveTo(-30, -238, -34, -272, -30, -302); ctx.closePath(); ctx.fill();
+    ctx.strokeStyle = C.cyan; ctx.lineWidth = 6; ctx.globalAlpha = 0.65;
+    for (let i = 0; i < 3; i++) { ctx.beginPath(); ctx.moveTo(-64 + i * 8, -296 + i * 46); ctx.lineTo(-4 + i * 10, -256 + i * 46); ctx.stroke(); }
+    ctx.globalAlpha = 1; ctx.restore();
   }
-  // stress ring marking pressure on the kneecap
+  // patella — glides up as quads engage
+  const py = 10 - quads * 14;
+  circle(2, py, 44, C.navy); circle(-1, py - 5, 38, C.pink); circle(-3, py - 8, 26, C.pinkLight);
+  // stress ring — pressure marks on the kneecap
   if (stress > 0) {
-    const pr = 1 + stress * 0.18;
-    ctx.strokeStyle = C.red; ctx.globalAlpha = 0.35 + 0.5 * stress; ctx.lineWidth = 16;
-    ctx.beginPath(); ctx.arc(2, 10, 62 * pr, 0, TAU); ctx.stroke(); ctx.globalAlpha = 1;
-    arrow(150, -150, 120, Math.PI * 0.75, 0.9);
+    const pr = 1 + stress * 0.16;
+    ctx.strokeStyle = C.red; ctx.globalAlpha = 0.35 + 0.5 * stress; ctx.lineWidth = 15;
+    ctx.beginPath(); ctx.arc(2, py, 62 * pr, 0, TAU); ctx.stroke(); ctx.globalAlpha = 1;
   }
   ctx.restore();
 }

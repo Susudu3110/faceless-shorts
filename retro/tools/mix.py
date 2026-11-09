@@ -146,10 +146,17 @@ if vf.exists():
     v = load_audio(vf)[:N]; voice = np.zeros((N, 2)); voice[:len(v)] = v
     rms = np.sqrt(np.mean(voice ** 2) + 1e-12); voice *= db(-19) / rms
     mix += voice
-# music
+# music — "bed"|"tension" (classic procedural) or viral presets from tools/music.py
+# ("hype"|"bouncy"|"dark"|"glow"|"troll"); seed varies per episode via script.json "seed".
 mus = script.get('music', 'bed')
 if mus and mus != 'none':
     m = music_bed() if mus == 'bed' else music_tension() if mus == 'tension' else None
+    if m is None and mus in ('hype', 'bouncy', 'dark', 'glow', 'troll'):
+        import sys as _sys, importlib as _ilmp
+        _sys.path.insert(0, str(P / 'tools'))
+        _music = _ilmp.import_module('music')
+        _music.SR = SR                                     # stay at the project's sample rate
+        m = _music.render(mus, DUR + 0.1, None, seed=int(script.get('seed', 7)))  # +0.1 keeps N's tail pad
     if m is None:
         a = load_audio(P / mus)[:N]; m = np.zeros(N); m[:len(a)] = a.mean(1); m /= np.abs(m).max() + 1e-9
     m = np.stack([m, m], 1) * db(-24 if voice is not None else -20)
