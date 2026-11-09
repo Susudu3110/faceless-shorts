@@ -154,3 +154,16 @@ behind it (why we get goosebumps, why knuckles crack, why yawning is contagious)
   made from genuine interest. Viewers smell view-farming in the first 3 seconds.
 
 
+
+## §14 · Upload recipe (proven plank-v1)
+1. Publish the render as a **GitHub release asset** (repo must be public):
+   `gh release create <tag> renders/final.mp4 assets/thumbnail.jpg`
+   Zapier's `file` params take URLs — local paths die with "Media type 'text/plain' not supported".
+2. `execute_zapier_write_action` YouTube `upload_video` with: video + thumbnail URLs, title, description,
+   tags (comma list), `category_id:"27"`, `made_for_kids:false`, `privacy_status:"public"`,
+   `notify_subscribers:true`. Returns video id directly.
+3. Verify with `_zap_raw_request` GET videos?part=status,processingDetails — uploadStatus "processed"
+   + processingStatus "succeeded" within ~1 min for a 12 MB 1080×1920.
+4. Thumbnail: render a clean frame (scene with strongest prop), overlay 3–4 stacked left-column
+   drawtext lines (DejaVuSans-Bold, yellow #FFD43B / white, borderw 13) — avoid colliding with
+   any bigText already painted in the frame.
