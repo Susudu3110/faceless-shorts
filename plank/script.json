@@ -1,0 +1,77 @@
+{
+ "voice": "am_michael",
+ "speed": 1.05,
+ "lead": 0.4,
+ "outro": 0.9,
+ "gap": 0.32,
+ "music": "glow",
+ "seed": 4,
+ "lines": [
+  {
+   "text": "You're a spine.",
+   "caps": "YOU'RE A *SPINE",
+   "gap": 0.3
+  },
+  {
+   "text": "And you've carried a one hundred and sixty pound human your whole life.",
+   "caps": "CARRY | ONE SIXTY | *POUNDS"
+  },
+  {
+   "text": "But you were never supposed to do it alone.",
+   "caps": "NOT *ALONE?"
+  },
+  {
+   "text": "You see, wrapped around your waist sits a hidden corset muscle.",
+   "caps": "*YOU SEE | HIDDEN *CORSET"
+  },
+  {
+   "text": "It squeezes your spine armor-tight, and locks every vertebra in place.",
+   "caps": "*WRAPS | LOCKS *TIGHT"
+  },
+  {
+   "text": "Then we all sat down... and the corset got switched off.",
+   "caps": "*SWITCHED OFF?"
+  },
+  {
+   "text": "So your back muscles carry everything alone.",
+   "caps": "BACK | *CARRIES ALL?"
+  },
+  {
+   "text": "Back ache finds you. You stretch. You crack it.",
+   "caps": "*ACHE | PAYS"
+  },
+  {
+   "text": "The armor stays asleep.",
+   "caps": "ARMOR *ASLEEP"
+  },
+  {
+   "text": "The re-hiring interview is the laziest pose on earth: hold one push-up, and... don't move.",
+   "caps": "THE *PLANK? | DON'T *MOVE?"
+  },
+  {
+   "text": "Because the stillness is the whole trick.",
+   "caps": "STILLNESS | *TRICK?"
+  },
+  {
+   "text": "The world record stands at nine hours, thirty eight minutes.",
+   "caps": "WORLD *RECORD | 9 HOURS"
+  },
+  {
+   "text": "You only need three sets, of thirty seconds.",
+   "caps": "YOU: 3 \u00d7 30 | *SECONDS"
+  },
+  {
+   "text": "And a review of two hundred and seventy studies found these exact holds drop blood pressure better than any other exercise.",
+   "caps": "BLOOD *PRESSURE | *DROPS"
+  },
+  {
+   "text": "Your back isn't weak. It's out of a job.",
+   "caps": "*OUT OF | A *JOB",
+   "gap": 0.45
+  },
+  {
+   "text": "Follow for one move every day.",
+   "caps": "ONE MOVE | *DAILY"
+  }
+ ]
+}
